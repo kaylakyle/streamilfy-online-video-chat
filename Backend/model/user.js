@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
 const userSchema = new mongoose.Schema({
-    fullname: {
+    //login page info
+    fullName: {
         type: String,
         required: true,
     },
@@ -16,19 +17,20 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 6,
     },
+    //onboarding page info
     bio: {
         type: String,
         default: '',
     },
-    profilePicture: {
+    profilePic: {
         type: String,
         default: '',
     },
-    nativelanguage: {
+    nativeLanguage: {
         type: String,
         default: '',
     },
-    learninglanguage: {
+    learningLanguage: {
         type: String,
         default: '',
     },
@@ -40,13 +42,15 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
-    friends : [{
+    friends : [
+        {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-    }],
+    }
+   ],
 }, { timestamps: true });
 
-// Hash password before saving
+// Hash password before saving creating a pre hook
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
         return next();
@@ -61,7 +65,6 @@ userSchema.pre('save', async function (next) {
 
 // Compare passwordmethod
 
-
+//MODEL OF THE SCHEMA
 const User = mongoose.model('User', userSchema);
-
 export default User;
