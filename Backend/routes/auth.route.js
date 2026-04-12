@@ -8,3 +8,9 @@ router.post ("/login", login);
 router.post ("/logout", logout);
 
 export default router;
+
+
+
+// "fullName": "Dennis Liazula",
+//   "email": "liazuladennis@gmail.com",
+//   "password": "pussy123"

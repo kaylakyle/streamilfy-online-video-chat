@@ -114,6 +114,6 @@ export async function login(req, res) {
 export  function logout(req, res) {
     //for logout just clear the user cookies
     // res.send("Logout endpoint");
-     res.clearcookie("jwt")
+     res.clearCookie("jwt")
      res.status(200).json({success:true, message:"Logout Successfully"});
 }
