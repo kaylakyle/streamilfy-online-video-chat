@@ -16,15 +16,18 @@ export async function signup(req, res) {
             return res.status(400).json ({message: "Password must be at least 6 characters"})
         }
 
-    // check user sent correct email
-    const emailRegex = /^[^\$@]+@[^\$@]+\.[$@]+$/;
-    if (!emailRegex.test(email)) {
-        return res.status(400).json ({message: "Invalid email format"});
-    }
+   // Validate email format
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (!emailRegex.test(email)) {
+    return res.status(400).json({
+        message: "Invalid email format"
+    });
+}
 
    // check if user email already exits
    const existingUser = await User.findOne({email});
-   if (!existingUser) {
+   if (existingUser) {
     return res.status(400).json ({message: "Email already exists, please use a diffrent email"});
    }
 
@@ -32,12 +35,14 @@ export async function signup(req, res) {
    const  idx = Math.floor(Math.random() * 100) + 1; //generate random numbers between 1-100
    const randomAvator = `https://www.freepik.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=730f244f-17d8-4ceb-89de-d54b85d05ac2&query=Placeholder+avatar`
 
-   const newUser = new User.Create ({
+   const newUser = new User({
     email,
     fullName,
     password,
     profilePic: randomAvator,
-   })
+});
+
+await newUser.save();
 
    // create a JWT TOKEN
    const token = jwt.sign({userId:newUser._id},process.env.JWT_SECRET_KEY, {
