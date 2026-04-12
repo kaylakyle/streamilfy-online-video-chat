@@ -81,7 +81,7 @@ export async function login(req, res) {
         }
 
         // check if email or passowrd is valid
-        const user = await user.findOne({email});
+        const user = await User.findOne({email});
         if (!user) return res.status(401).json({ message:"Invalid email or password"});
 
         //check if password is correct
@@ -89,7 +89,7 @@ export async function login(req, res) {
         if(!password) return res.status(401).json({message:"Invalid email or password"});
 
         // create a JWT TOKEN
-       const token = jwt.sign({userId:newUser._id},process.env.JWT_SECRET_KEY, {
+       const token = jwt.sign({userId:User._id},process.env.JWT_SECRET_KEY, {
         expiresIn: "7d"
 
       })
