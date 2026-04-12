@@ -6,6 +6,6 @@ export async function login(req, res) {
     res.send("Login endpoint");
 }       
     
-export async function logout(req, res) {
+export  function logout(req, res) {
     res.send("Logout endpoint");
 }

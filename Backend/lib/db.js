@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose";// enable connect to db
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -9,7 +9,7 @@ const connectDB = async () => {
     console.log("MongoDB Connected");
   } catch (error) {
     console.error("Database connection error:", error.message);
-    process.exit(1);
+    process.exit(1);// connection failed
   }
 };
 
