@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 ## React Compiler
 
-The React Compiler is not enabled
+The React Compiler
