@@ -48,8 +48,17 @@ if (!emailRegex.test(email)) {
     profilePic: randomAvator,
 });
 
-       //create use to stream
-       await upsertStreamUser
+       try {
+         //create use to stream
+       await upsertStreamUser ({
+        id:newUser._id.toString(),
+        name:newUser.fullName,
+        image:newUser.profilePic || "",
+       });
+       console.log(`Stream user created: ${newUser.fullName} (${newUser._id})`);
+       }catch(error){
+        console.log("Error creating Stream user", error);
+       }
 
    // create a JWT TOKEN
    const token = jwt.sign({userId:newUser._id},process.env.JWT_SECRET_KEY, {
