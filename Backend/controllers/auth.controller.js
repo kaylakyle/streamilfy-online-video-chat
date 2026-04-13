@@ -1,6 +1,7 @@
 import User from "../model/user.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
+import { upsertStreamUser } from "../lib/stream.js";
 
 export async function signup(req, res) {
     const { email, password, fullName } = req.body;
@@ -46,6 +47,9 @@ if (!emailRegex.test(email)) {
     password,
     profilePic: randomAvator,
 });
+
+       //create use to stream
+       await upsertStreamUser
 
    // create a JWT TOKEN
    const token = jwt.sign({userId:newUser._id},process.env.JWT_SECRET_KEY, {
