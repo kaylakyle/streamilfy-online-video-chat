@@ -2,6 +2,8 @@ import User from "../model/user.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import { upsertStreamUser } from "../lib/stream.js";
+import { createPostUploadAttachmentEnrichmentMiddleware } from "stream-chat";
+
 
 export async function signup(req, res) {
     const { email, password, fullName } = req.body;
@@ -102,10 +104,12 @@ export async function login(req, res) {
         if(!password) return res.status(401).json({message:"Invalid email or password"});
 
         // create a JWT TOKEN
-       const token = jwt.sign({userId:User._id},process.env.JWT_SECRET_KEY, {
-        expiresIn: "7d"
-
-      })
+        // FIX: use correct user variable
+        const token = jwt.sign(
+            { userId: user._id },
+            process.env.JWT_SECRET_KEY,
+            { expiresIn: "7d" }
+        );
 
    //parse them to cookies
    res.cookie("jwt", token, {
@@ -129,4 +133,37 @@ export  function logout(req, res) {
     // res.send("Logout endpoint");
      res.clearCookie("jwt")
      res.status(200).json({success:true, message:"Logout Successfully"});
+}
+
+export async function onboard(req, res) {
+    try{
+            const userId = req.user._id;
+
+      const {fullName, bio, nativeLanguage, learningLanguage, location}  = req.body
+
+  if (!fullName || !bio || !nativeLanguage || !learningLanguage || !location) {
+    return res.status(400).json({
+        success: false,
+        message: "All fields are required",
+        missingFields: [
+            !fullName && "fullName",
+            !bio && "bio",
+            !nativeLanguage && "nativeLanguage",
+            !learningLanguage && "learningLanguage",
+            !location && "location",
+        ].filter(Boolean),
+    });
+}
+
+      const updatedUser = await User.findByIdAndUpdate(userId, {
+        ...req.body,
+        isOnboarded: true,
+      }, {new:true})
+
+      if(!updatedUser) return res.status(404).json({message:"User not found"})
+        res.status(200).json({success:true, user: updatedUser});
+    } catch(error){
+      console.log("Error in onboarding", error);
+      res.status(500).json({message:"Internal Server Error"}); 
+    }
 }
