@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./lib/db.js";
 import authRoutes from "./routes/auth.route.js"
+import userRoutes from "./routes/user.route.js"
 import cookieParse from "cookie-parser";
 
 dotenv.config();
@@ -19,3 +20,4 @@ app.listen(process.env.PORT, () => {
 });
 //routes
 app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
