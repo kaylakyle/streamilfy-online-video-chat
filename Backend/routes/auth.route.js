@@ -2,6 +2,7 @@ import express from "express";
 import { login, signup, logout} from "../controllers/auth.controller.js";
 import { protectRoute } from "../middleware/auth.middleware.js";
 import { onboard } from "../controllers/auth.controller.js";
+
 // CREATE THE ROUTER
 const router = express.Router()
 
