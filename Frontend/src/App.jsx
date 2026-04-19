@@ -2,8 +2,8 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>
-      <button className="btn">Button</button>
+    <div className="h-screen"  data-theme="dracula">
+      <button className="btn" >Button</button>
 <button className="btn btn-neutral">Neutral</button>
 <button className="btn btn-primary">Primary</button>
 <button className="btn btn-secondary">Secondary</button>
