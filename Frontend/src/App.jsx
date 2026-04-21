@@ -9,8 +9,21 @@ import NotificationsPage from './pages/NotificationsPage.jsx'
 import CallPage from './pages/CallPage.jsx'
 import ChatPage from './pages/ChatPage.jsx'
 import OnboardingPage from './pages/OnboardingPage.jsx'
+import { useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from "react";
+import { axiosInstance } from './lib/axios.js';
 
 const App = () => {
+  const {data:authData, isLoading, error} = useQuery({ 
+  queryKey: ["authUser"],
+
+    queryFn: async () => {
+      const res = awaitInstance.get("auth/me");
+      return res.data;
+    },
+  });
+
+  const authUser = authData?.user
   return (
     <div className="h-screen"  data-theme="night">
    {/* <button onClick={() => toast.success("hello world")}>
