@@ -1,6 +1,6 @@
 import React from 'react'
 import {Route ,Routes} from 'react-router'
-import { Toaster} from 'react-hot-toast'
+import toast, { Toaster } from "react-hot-toast";
 
 import HomePage from './pages/HomePage.jsx'
 import SignUpPage from './pages/SignUpPage.jsx'
@@ -13,7 +13,9 @@ import OnboardingPage from './pages/OnboardingPage.jsx'
 const App = () => {
   return (
     <div className="h-screen"  data-theme="night">
-
+   {/* <button onClick={() => toast.success("hello world")}>
+        create a toast
+      </button> */}
       <Routes>  
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<SignUpPage />} />
