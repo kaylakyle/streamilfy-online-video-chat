@@ -26,7 +26,7 @@ const SignUpPage = () => {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    console.log(signupData); // call mutate mutate();
+    console.log(signupData); // call mutate mutate();.
   };
 
   return (
