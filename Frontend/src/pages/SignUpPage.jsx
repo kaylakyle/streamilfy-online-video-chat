@@ -9,8 +9,8 @@ const SignUpPage = () => {
     password: "",
   });
 
-  //const queryclient = usequeryclient
-  // This is how we did it at first, without using our custom hook
+  //const queryclient = usequeryclient.
+  // This is how we did it at first, without using our custom hook.
    const queryClient = useQueryClient();
    
    const {
