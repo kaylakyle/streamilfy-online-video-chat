@@ -22,7 +22,7 @@ const SignUpPage = () => {
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ["authUser"] }),
    });
 
-  //const {mutate}
+  //const {mutate}.
 
   const handleSignup = (e) => {
     e.preventDefault();
