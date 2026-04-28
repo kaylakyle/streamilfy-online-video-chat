@@ -34,6 +34,7 @@ const SignUpPage = () => {
       className="h-screen flex items-center justify-center p-6"
       style={{ backgroundColor: "#F3E7D9" }}
     >
+
       <div className="flex w-full max-w-5xl rounded-2xl shadow-lg overflow-hidden">
 
         {/* LEFT SIDE */}
