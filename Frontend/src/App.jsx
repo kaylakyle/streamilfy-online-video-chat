@@ -12,7 +12,7 @@ import { Toaster } from "react-hot-toast";
 
 import PageLoader from "./components/PageLoader.jsx";
 import useAuthUser from "./hooks/useAuthUser.js";
-// import Layout from "./components/Layout.jsx";
+ import Layout from "./components/Layout.jsx";
 // import { useThemeStore } from "./store/useThemeStore.js";
 
 const App = () => {
@@ -33,11 +33,9 @@ const App = () => {
           element={
             isAuthenticated && isOnboarded ? (
 
-              // <Layout showSidebar={true}>
-
-                
+              <Layout showSidebar={true}>
                 <HomePage />
-              // </Layout>
+               </Layout>
             ) : (
               <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
             )
@@ -59,10 +57,10 @@ const App = () => {
           path="/notifications"
           element={
             isAuthenticated && isOnboarded ? (
-              // <Layout showSidebar={true}>
+               <Layout showSidebar={true}>
                 <NotificationsPage />
 
-              // </Layout>
+               </Layout>
             ) : (
               <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
             )
@@ -84,11 +82,11 @@ const App = () => {
           element={
             isAuthenticated && isOnboarded ? (
 
-              // <Layout showSidebar={false}>
+               <Layout showSidebar={false}>
 
                 <ChatPage />
 
-              // </Layout>
+               </Layout>
             ) : (
               <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
             )
