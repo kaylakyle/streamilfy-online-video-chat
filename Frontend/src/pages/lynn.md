@@ -9,7 +9,7 @@
   const handleSignup = (e) => {
     e.preventDefault();
     signupMutation(signupData);
-  };
+  };..
 
   return (
     <div
