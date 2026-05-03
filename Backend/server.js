@@ -8,7 +8,7 @@ import cookieParse from "cookie-parser";
 import cors from "cors";
 
 dotenv.config();
-//start the server and connect to the database
+//start the server and connect to the database.
 connectDB();
 //start exress server
 const app = express();
