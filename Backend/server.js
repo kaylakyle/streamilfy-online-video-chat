@@ -10,7 +10,7 @@ import cors from "cors";
 dotenv.config();
 //start the server and connect to the database.
 connectDB();
-//start exress server
+//start exress server.
 const app = express();
 const PORT = process.env.PORT;
 
