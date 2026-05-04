@@ -29,10 +29,13 @@ Suggests users based on language preferences
 
 💬 Real-Time Chat
 One-on-one messaging powered by Stream Chat API
+
 📹 Video Call Integration
 Generate and share call links within conversations
+
 🧑‍🎨 Dynamic Avatars
 Users can generate profile pictures dynamically
+
 🧠 Technical Highlights
 Built a full-stack architecture connecting frontend and backend via REST APIs
 Implemented real-time communication using Stream Chat
