@@ -23,6 +23,7 @@ Secure signup/login with profile setup (bio, languages, location, avatar)
 
 🤝 Friend System
 Send, receive, and manage friend requests
+
 🎯 User Recommendations
 Suggests users based on language preferences
 💬 Real-Time Chat
