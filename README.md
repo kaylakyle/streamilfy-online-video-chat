@@ -26,6 +26,7 @@ Send, receive, and manage friend requests
 
 🎯 User Recommendations
 Suggests users based on language preferences
+
 💬 Real-Time Chat
 One-on-one messaging powered by Stream Chat API
 📹 Video Call Integration
