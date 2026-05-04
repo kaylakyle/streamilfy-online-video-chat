@@ -19,21 +19,27 @@ The app is designed to simulate a real-world social platform while solving a pra
 ✨ Core Features
 
 👤 User Authentication & Onboarding
+
 Secure signup/login with profile setup (bio, languages, location, avatar)
 
 🤝 Friend System
+
 Send, receive, and manage friend requests
 
 🎯 User Recommendations
+
 Suggests users based on language preferences
 
 💬 Real-Time Chat
+
 One-on-one messaging powered by Stream Chat API
 
 📹 Video Call Integration
+
 Generate and share call links within conversations
 
 🧑‍🎨 Dynamic Avatars
+
 Users can generate profile pictures dynamically
 
 🧠 Technical Highlights
