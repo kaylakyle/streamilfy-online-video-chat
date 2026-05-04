@@ -17,8 +17,10 @@ Create and manage personalized user profiles
 The app is designed to simulate a real-world social platform while solving a practical problem — finding consistent language practice partners.
 
 ✨ Core Features
+
 👤 User Authentication & Onboarding
 Secure signup/login with profile setup (bio, languages, location, avatar)
+
 🤝 Friend System
 Send, receive, and manage friend requests
 🎯 User Recommendations
