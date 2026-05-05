@@ -49,7 +49,7 @@ Designed state management and caching with React Query
 Structured backend with modular controllers, routes, and models
 Managed relationships like friends and requests using MongoDB schemas
 Handled authentication using JWT-based sessions
-🛠️ Tech Stack
+ Tech Stack
 
 Frontend
 
