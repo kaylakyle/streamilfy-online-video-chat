@@ -38,7 +38,7 @@ One-on-one messaging powered by Stream Chat API
 
 Generate and share call links within conversations
 
-🧑‍🎨 Dynamic Avatars
+ Dynamic Avatars
 
 Users can generate profile pictures dynamically
 
