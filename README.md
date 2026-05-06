@@ -6,7 +6,7 @@ The platform focuses on building meaningful language exchange experiences by com
 
 ## 📸 Screenshots
 ### Signin Page
-![signin Page](signin.jpg)
+![Signin Page](sign%20in.jpg)
 
  Overview
 
