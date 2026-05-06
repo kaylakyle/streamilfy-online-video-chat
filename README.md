@@ -17,6 +17,12 @@ The platform focuses on building meaningful language exchange experiences by com
 ### Notifications
 ![Notifications](notifications.jpg)
 
+### Chat Page
+![Chat Page](chatpage.jpg)
+
+### Call Page
+![Call Page](call%20page.jpg)
+
  Overview
 
 Streamify allows users to:
