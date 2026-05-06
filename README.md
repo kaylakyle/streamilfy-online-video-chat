@@ -8,6 +8,15 @@ The platform focuses on building meaningful language exchange experiences by com
 ### Signin Page
 ![Signin Page](sign%20in.jpg)
 
+### Create Account Page
+![Create Account Page](Create%20account.jpg)
+
+### Dashboard
+![Dashboard](dashboard.jpg)
+
+### Notifications
+![Notifications](notifications.jpg)
+
  Overview
 
 Streamify allows users to:
