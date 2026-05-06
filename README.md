@@ -4,6 +4,10 @@ Streamify is a full-stack web application that enables users to connect with peo
 
 The platform focuses on building meaningful language exchange experiences by combining user matching, social interaction, and real-time chat features into one seamless system.
 
+## 📸 Screenshots
+### Signin Page
+![Signin Page](sign.jpg)
+
  Overview
 
 Streamify allows users to:
