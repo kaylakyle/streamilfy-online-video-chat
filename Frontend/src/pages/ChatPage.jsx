@@ -34,33 +34,41 @@ const ChatPage = () => {
   const { data: tokenData } = useQuery({
     queryKey: ["streamToken"],
     queryFn: getStreamToken,
-    enabled: !!authUser, // this will run only when authUser is available
+    enabled: !!authUser,
   });
 
   useEffect(() => {
     const initChat = async () => {
-      if (!tokenData?.token || !authUser) return;
+      if (!tokenData?.token || !authUser || !targetUserId) return;
 
       try {
+        setLoading(true);
+
         console.log("Initializing stream chat client...");
 
         const client = StreamChat.getInstance(STREAM_API_KEY);
 
-        await client.connectUser(
-          {
-            id: authUser._id,
-            name: authUser.fullName,
-            image: authUser.profilePic,
-          },
-          tokenData.token
-        );
+        // Prevent connecting the same user twice
+        if (client.userID !== authUser._id) {
+          // Disconnect previous user if exists
+          if (client.userID) {
+            await client.disconnectUser();
+          }
 
-        //
-        const channelId = [authUser._id, targetUserId].sort().join("-");
+          await client.connectUser(
+            {
+              id: authUser._id,
+              name: authUser.fullName,
+              image: authUser.profilePic,
+            },
+            tokenData.token
+          );
+        }
 
-        // you and me
-        // if i start the chat => channelId: [myId, yourId]
-        // if you start the chat => channelId: [yourId, myId]  => [myId,yourId]
+        // Create unique channel ID
+        const channelId = [authUser._id, targetUserId]
+          .sort()
+          .join("-");
 
         const currChannel = client.channel("messaging", channelId, {
           members: [authUser._id, targetUserId],
@@ -81,19 +89,25 @@ const ChatPage = () => {
     initChat();
   }, [tokenData, authUser, targetUserId]);
 
-  const handleVideoCall = () => {
-    if (channel) {
+  const handleVideoCall = async () => {
+    if (!channel) return;
+
+    try {
       const callUrl = `${window.location.origin}/call/${channel.id}`;
 
-      channel.sendMessage({
+      await channel.sendMessage({
         text: `I've started a video call. Join me here: ${callUrl}`,
       });
 
       toast.success("Video call link sent successfully!");
+    } catch (error) {
+      toast.error("Failed to send video call link");
     }
   };
 
-  if (loading || !chatClient || !channel) return <ChatLoader />;
+  if (loading || !chatClient || !channel) {
+    return <ChatLoader />;
+  }
 
   return (
     <div className="h-[93vh]">
@@ -101,16 +115,19 @@ const ChatPage = () => {
         <Channel channel={channel}>
           <div className="w-full relative">
             <CallButton handleVideoCall={handleVideoCall} />
+
             <Window>
               <ChannelHeader />
               <MessageList />
-              <MessageInput focus />
+              <MessageComposer focus />
             </Window>
           </div>
+
           <Thread />
         </Channel>
       </Chat>
     </div>
   );
 };
+
 export default ChatPage;

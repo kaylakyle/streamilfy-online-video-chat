@@ -7,9 +7,17 @@
 //   withCredentials: true, // send cookies with the request at the frontend
 // });
 
+// import axios from "axios";
+
+// export const axiosInstance = axios.create({
+//      baseURL:  "http://localhost:5000/api",
+//      withCredentials: true, // send cookies with the request at the frontend
+// });
+
+
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-     baseURL:  "http://localhost:5000/api",
-     withCredentials: true, // send cookies with the request at the frontend
+     baseURL: import.meta.env.VITE_API_URL,
+     withCredentials: true,
 });
