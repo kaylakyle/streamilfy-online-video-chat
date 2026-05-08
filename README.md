@@ -41,7 +41,7 @@ Streamify solves this by creating a social and interactive environment where use
 ### Dashboard.
 ![Dashboard](dashboard.jpg)
 
-### Notifications
+### Notifications.
 ![Notifications](notifications.jpg)
 
 ### Chat Page.
