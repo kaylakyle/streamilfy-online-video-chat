@@ -32,7 +32,7 @@ Streamify solves this by creating a social and interactive environment where use
 
 ## 📸 Screenshots
 
-### Sign In Page
+### Sign In Page.
 ![Sign In Page](sign%20in.jpg)
 
 ### Create Account Page
