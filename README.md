@@ -38,7 +38,7 @@ Streamify solves this by creating a social and interactive environment where use
 ### Create Account Page.
 ![Create Account Page](Create%20account.jpg)
 
-### Dashboard
+### Dashboard.
 ![Dashboard](dashboard.jpg)
 
 ### Notifications
