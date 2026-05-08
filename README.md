@@ -44,7 +44,7 @@ Streamify solves this by creating a social and interactive environment where use
 ### Notifications
 ![Notifications](notifications.jpg)
 
-### Chat Page
+### Chat Page.
 ![Chat Page](chatpage.jpg)
 
 ### Call Page
