@@ -17,7 +17,7 @@ Streamify solves this by creating a social and interactive environment where use
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features.
 
 * 🔐 **Secure Authentication** – User signup/login with personalized profiles
 * 👤 **Custom User Profiles** – Bio, languages, location, and avatars
