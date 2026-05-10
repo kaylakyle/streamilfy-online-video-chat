@@ -9,7 +9,7 @@ A **full-stack real-time language exchange platform** designed to help users con
 Many language learners struggle to:
 
 * Find consistent conversation partners.
-* Practice languages in real-world conversations
+* Practice languages in real-world conversations.
 * Build confidence speaking with native speakers
 * Access engaging platforms focused on language exchange
 
