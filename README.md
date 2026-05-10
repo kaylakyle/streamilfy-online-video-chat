@@ -10,7 +10,7 @@ Many language learners struggle to:
 
 * Find consistent conversation partners.
 * Practice languages in real-world conversations.
-* Build confidence speaking with native speakers
+* Build confidence speaking with native speakers.
 * Access engaging platforms focused on language exchange
 
 Streamify solves this by creating a social and interactive environment where users can connect, communicate, and learn languages naturally in real time.
