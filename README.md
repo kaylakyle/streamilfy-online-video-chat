@@ -23,9 +23,9 @@ Streamify solves this by creating a social and interactive environment where use
 * 👤 **Custom User Profiles** – Bio, languages, location, and avatars.
 * 🤝 **Friend Request System** – Send, receive, and manage connections.
 * 🎯 **Language-Based Recommendations** – Discover users based on language preferences.
-* 💬 **Real-Time Messaging** – Instant one-on-one communication powered by Stream Chat
-* 📹 **Video Call Integration** – Share and join call links directly inside chats
-* 🖼️ **Dynamic Avatar Generation** – Automatically generated profile avatars
+* 💬 **Real-Time Messaging** – Instant one-on-one communication powered by Stream Chat.
+* 📹 **Video Call Integration** – Share and join call links directly inside chats.
+* 🖼️ **Dynamic Avatar Generation** – Automatically generated profile avatars.
 * ⚡ **Fast Real-Time Experience** – Optimized frontend state management and caching
 
 ---
