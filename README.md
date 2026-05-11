@@ -4,7 +4,7 @@ A **full-stack real-time language exchange platform** designed to help users con
 
 ---
 
-## 🌍 Problem
+## 🌍 Problem.
 
 Many language learners struggle to:
 
