@@ -13,13 +13,20 @@ connectDB();
 
 const app = express();
 
+//start server
+const PORT = process.env.PORT || 5000;
+
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://your-frontend.vercel.app"
+    // "https://your-frontend.vercel.app"
   ],
   credentials: true
 }));
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 app.use(express.json());
 app.use(cookieParser());
@@ -33,3 +40,5 @@ app.use("/api/users", userRoutes);
 app.use("/api/chat", chatRoutes);
 
 export default app;
+
+
