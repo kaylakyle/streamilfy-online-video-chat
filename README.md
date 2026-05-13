@@ -67,3 +67,7 @@ Password: demo1234
 cd FRONTEND 
 
 intialize the project
+
+# run the project
+
+npm run dev
