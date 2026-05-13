@@ -62,11 +62,11 @@ Password: demo1234
 
 ##  How to setup the project
 
-# npm i
-
-cd FRONTEND 
+# clone the project in your pc
 
 intialize the project
+
+# npm i
 
 # run the project
 
