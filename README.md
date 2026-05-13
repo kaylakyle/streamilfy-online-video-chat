@@ -62,6 +62,8 @@ Password: demo1234
 
 ##  How to setup the project
 
+# npm i
+
 cd FRONTEND 
 
 intialize the project
