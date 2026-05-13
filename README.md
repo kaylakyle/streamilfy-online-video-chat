@@ -63,3 +63,5 @@ Password: demo1234
 ##  How to setup the project
 
 cd FRONTEND 
+
+intialize the project
