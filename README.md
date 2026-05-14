@@ -2,7 +2,7 @@
 
 A **full-stack real-time language exchange platform** designed to help users connect with people around the world to practice languages through messaging, social interaction, and live communication features.
 
----
+--------
 
 ## 🌍 Problem.
 
