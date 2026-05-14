@@ -15,7 +15,7 @@ Many language learners struggle to:
 
 Streamify solves this by creating a social and interactive environment where users can connect, communicate, and learn languages naturally in real time.
 
----
+---------
 
 ## ✨ Key Features.
 
