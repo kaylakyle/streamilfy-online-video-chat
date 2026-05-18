@@ -52,7 +52,7 @@ Streamify solves this by creating a social and interactive environment where use
 
 ---
 
-## 👥 Demo Access
+## 👥 Demo Access.
 
 To allow full evaluation of the platform, please use the demo credentials below:
 
