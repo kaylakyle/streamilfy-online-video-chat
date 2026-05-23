@@ -163,6 +163,8 @@ export const THEMES = [
 ];
 
 export const LANGUAGES = [
+  "Luhya",
+  "Kiswahili",
   "English",
   "Spanish",
   "French",
@@ -180,6 +182,8 @@ export const LANGUAGES = [
 ];
 
 export const LANGUAGE_TO_FLAG = {
+  luhya: "lh",
+  kiswahili: "kw",
   english: "gb",
   spanish: "es",
   french: "fr",
