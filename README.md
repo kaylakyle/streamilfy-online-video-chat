@@ -2,7 +2,7 @@
 
 A **full-stack real-time language exchange platform** designed to help users connect with people around the world to practice languages through messaging, social interaction, and live communication features.
 
----
+-----------
 
 ## 🌍 Problem.
 
@@ -15,7 +15,7 @@ Many language learners struggle to:
 
 Streamify solves this by creating a social and interactive environment where users can connect, communicate, and learn languages naturally in real time.
 
----
+-----------
 
 ## ✨ Key Features.
 
@@ -52,7 +52,7 @@ Streamify solves this by creating a social and interactive environment where use
 
 ---
 
-## 👥 Demo Access
+## 👥 Demo Access.
 
 To allow full evaluation of the platform, please use the demo credentials below:
 
@@ -60,4 +60,14 @@ To allow full evaluation of the platform, please use the demo credentials below:
 Email: demo@streamify.app
 Password: demo1234
 
-## 
+##  How to setup the project.
+
+# clone the project in your pc
+
+intialize the project
+
+# npm i
+
+# run the project
+
+npm run dev
