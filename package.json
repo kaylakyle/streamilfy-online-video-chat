@@ -4,7 +4,7 @@
   "description": "A **full-stack real-time language exchange platform** designed to help users connect with people around the world to practice languages through messaging, social interaction, and live communication features.",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix Backend && npm install --prefix Frontend && npm run build --prefix Frontend",
+    "build": "npm install --prefix Backend && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "npm run start --prefix Backend"
   },
   "repository": {
