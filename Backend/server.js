@@ -113,7 +113,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/chat", chatRoutes);
 
 if (process.env.NODE_ENV === "production") {
-  const distPath = path.join(__dirname, "../frontend/dist");
+  const distPath = path.join(__dirname, "../Frontend/dist");
 
   app.use(express.static(distPath));
 
