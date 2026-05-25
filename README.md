@@ -64,10 +64,5 @@ Password: demo1234
 
 # clone the project in your pc
 
-intialize the project
-
-# npm i
-
-# run the project
-
-npm run dev
+# npm run build
+# npm start
