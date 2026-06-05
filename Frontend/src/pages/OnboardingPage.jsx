@@ -55,7 +55,7 @@ const OnboardingPage = () => {
     onboardingMutation(formState);
   };
 
-  // ✅ FIXED AVATAR GENERATOR (reliable + cache-safe)
+  //  FIXED AVATAR GENERATOR (reliable + cache-safe)
   const handleRandomAvatar = () => {
     const seed = `${authUser?._id || "user"}-${Date.now()}-${Math.random()}`;
 
