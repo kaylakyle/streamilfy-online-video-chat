@@ -25,7 +25,7 @@ const OnboardingPage = () => {
     profilePic: "",
   });
 
-  // ✅ sync authUser safely AFTER load
+  //  sync authUser safely AFTER load
   useEffect(() => {
     if (authUser) {
       setFormState({
